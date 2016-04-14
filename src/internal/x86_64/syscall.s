@@ -9,5 +9,5 @@ __syscall:
 	movq %r8,%r10
 	movq %r9,%r8
 	movq 8(%rsp),%r9
-	syscall
+	int $0x80
 	ret

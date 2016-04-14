@@ -13,7 +13,7 @@ __clone:
 	and $-16,%rsi
 	sub $8,%rsi
 	mov %rcx,(%rsi)
-	syscall
+	int $0x80
 	test %eax,%eax
 	jnz 1f
 	xor %ebp,%ebp
@@ -22,6 +22,6 @@ __clone:
 	mov %eax,%edi
 	xor %eax,%eax
 	mov $60,%al
-	syscall
+	int $0x80
 	hlt
 1:	ret

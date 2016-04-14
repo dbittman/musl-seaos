@@ -24,7 +24,7 @@ __cp_begin:
 	mov 8(%rsp),%r8
 	mov 16(%rsp),%r9
 	mov %r11,8(%rsp)
-	syscall
+	int $0x80
 __cp_end:
 	ret
 __cp_cancel:

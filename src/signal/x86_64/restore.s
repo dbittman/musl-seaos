@@ -5,4 +5,4 @@
 __restore_rt:
 __restore:
 	movl $15, %eax
-	syscall
+	int $0x80

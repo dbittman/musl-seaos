@@ -6,7 +6,7 @@ __vfork:
 vfork:
 	pop %rdx
 	mov $58,%eax
-	syscall
+	int $0x80
 	push %rdx
 	mov %rax,%rdi
 	jmp __syscall_ret
